@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service AppendEntries {
+  // Sends a greeting
+  rpc SayHello (AppendEntryRequest) returns (AppendEntryReply) {}
+}
+
+message AppendEntryRequest {
+  string message = 1;
+}
+
+// The response message containing the greetings
+message AppendEntryReply {
+  bool message = 1;
+}
