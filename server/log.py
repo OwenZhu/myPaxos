@@ -6,4 +6,12 @@
 
 
 class Log(object):
-    pass
+    def __init__(self):
+        self.entries = list()
+
+
+class Entry(object):
+    def __init__(self, term, index, command):
+        self.term = term
+        self.index = index
+        self.command = command

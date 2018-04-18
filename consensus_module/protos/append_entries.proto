@@ -1,15 +1,18 @@
 syntax = "proto3";
 
 service AppendEntries {
-  // Sends a greeting
-  rpc SayHello (AppendEntryRequest) returns (AppendEntryReply) {}
+  rpc append_entries (AppendEntryRequest) returns (AppendEntryResponse) {}
 }
 
 message AppendEntryRequest {
-  string message = 1;
+  int32 term = 1;
+  string leaderId = 2;
+  int32 prevLogIndex = 3;
+  int32 prevLogTerm = 4;
+  repeated int32 entries = 5[packed=true];
+  int32 leaderCommit = 6;
 }
 
-// The response message containing the greetings
-message AppendEntryReply {
-  bool message = 1;
+message AppendEntryResponse {
+  bool respond = 1;
 }

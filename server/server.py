@@ -6,7 +6,6 @@
 
 from servers_config import ServersConfig
 from log import Log
-from ..state.candidate import Candidate
 
 
 class Server(object):
@@ -17,7 +16,7 @@ class Server(object):
         self._server_list = conf.server_list
         self._total_nodes = conf.total_node
 
-        self._commitIndex = 0
+        self._commit_index = 0
         self._currentTerm = 0
 
         self._lastApplied = 0
@@ -37,4 +36,4 @@ class Server(object):
 
 if __name__ == '__main__':
     config = ServersConfig()
-    server = Server(name="node_1", state=Candidate(), log=Log(), conf=config)
+    server = Server(name="node_1", state=Follower(), log=Log(), conf=config)
