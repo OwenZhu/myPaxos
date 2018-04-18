@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83c7d927-2273-4281-a50f-11425b38a751" name="Default" comment="init">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/state_machine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/myRaft.iml" afterPath="$PROJECT_DIR$/.idea/myRaft.iml" />
+    <list default="true" id="83c7d927-2273-4281-a50f-11425b38a751" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consensus_module/protos/append_entries.proto" afterPath="$PROJECT_DIR$/consensus_module/protos/append_entries.proto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consensus_module/state/state.py" afterPath="$PROJECT_DIR$/consensus_module/state/state.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/log.py" afterPath="$PROJECT_DIR$/server/log.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.py" afterPath="$PROJECT_DIR$/server/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -337,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523968152123</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="190418">
+      <created>1524060098855</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524060098855</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -368,7 +369,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="190418" />
+    <option name="LAST_COMMIT_MESSAGE" value="190418" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
