@@ -8,4 +8,8 @@ from .state import State
 
 
 class Candidate(State):
-    pass
+    def __init__(self):
+        super().__init__()
+
+    def request_vote(self):
+        pass

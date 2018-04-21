@@ -6,34 +6,43 @@
 
 from servers_config import ServersConfig
 from log import Log
+import threading
+from state_machine import StateMachine
 
 
 class Server(object):
-    def __init__(self, name, state, log, conf):
+    def __init__(self, name, state, conf):
         self._name = name
+
+        # consensus module
         self._state = state
-        self._log = log
+
+        self._log = Log()
+        self._state_machine = StateMachine()
         self._server_list = conf.server_list
         self._total_nodes = conf.total_node
 
         self._commit_index = 0
-        self._currentTerm = 0
+        self._current_term = 0
 
-        self._lastApplied = 0
-
-        self._lastLogIndex = 0
-        self._lastLogTerm = None
+        self._last_applied = 0
+        self._last_log_index = 0
+        self._last_log_term = None
 
         self._state.set_server(self)
-        pass
 
-    def run(self):
-        pass
+        class ReadThread(threading.Thread):
+            def run(thread):
+                pass
 
-    def close(self):
-        pass
+        class WriteThread(threading.Thread):
+            def run(thread):
+                pass
 
+        self.read_thread = ReadThread()
+        self.write_thread = WriteThread()
 
-if __name__ == '__main__':
-    config = ServersConfig()
-    server = Server(name="node_1", state=Follower(), log=Log(), conf=config)
+        self.read_thread.daemon = True
+        self.read_thread.start()
+        self.write_thread.daemon = True
+        self.write_thread.start()

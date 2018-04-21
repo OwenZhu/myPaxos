@@ -10,7 +10,9 @@ from collections import defaultdict
 
 class Leader(State):
     def __init__(self):
+        super().__init__()
         self._nextIndexes = defaultdict(int)
         self._matchIndex = defaultdict(int)
 
-    pass
+    def _append_entries(self):
+        pass
